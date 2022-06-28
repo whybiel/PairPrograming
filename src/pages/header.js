@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
+import bgheader from "../img/bgheader.png"
+
 const Container = styled.section`
     width:100%;
     height: 65em;
 
-    background-image: url('https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:e048e30a-811b-49f2-a92f-1af9a2985abd;revision=0?component_id=8444393a-5d93-4997-8ad0-0d450a8011e0&api_key=CometServer1&access_token=1656306478_urn%3Aaaid%3Asc%3AUS%3Ae048e30a-811b-49f2-a92f-1af9a2985abd%3Bpublic_ecbd3b9f705cad051d83de44dfeddb575c60aeb6');
+    background-image: url(${bgheader});
     background-size: cover;
 
     display: flex;
