@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 import bgheader from "../img/bgheader.png"
+import bgheaderMob from "../img/bgheadermobile.png"
 
 const Container = styled.section`
     width:100%;
-    height: 65em;
+    height: 85em;
 
     background-image: url(${bgheader});
     background-size: cover;
@@ -13,6 +14,11 @@ const Container = styled.section`
     display: flex;
     align-items: center;
     flex-direction: column;
+
+    @media (max-width:768px) {
+        background-image: url(${bgheaderMob});
+    }
+
 `
 const Subcontainer = styled.div`
     width: 90%;
@@ -20,7 +26,22 @@ const Subcontainer = styled.div`
     display: flex;
     justify-content: space-between;
     padding:1.5em 0vh 0 0;
+
+    @media (max-width:768px) {
+        display: none;
+    }
 `
+const Menu = styled.img`
+    display: none;
+
+    @media (max-width:768px) {
+        width: 30px;
+        display: inline-block;
+        align-self: flex-end;
+        margin: 1em 1em 0 0;
+    }
+`
+
 const Logo = styled.h2`
     font-size:2em;
 `
@@ -70,6 +91,10 @@ const Title = styled.h1`
     font-weight: 600;
 
     letter-spacing: 10px;
+
+    @media (max-width:768px) {
+        font-size: 3em;
+    }
 `
 
 export default function App() {
@@ -85,6 +110,7 @@ export default function App() {
                     </List>
                 </NavBar>
             </Subcontainer>
+            <Menu src="https://cdn-icons.flaticon.com/png/512/3018/premium/3018960.png?token=exp=1656704669~hmac=58114c5d2f0966c0463926205b08abda"/>
             <BoxTitle>
                 <Title>RECIPES</Title>
             </BoxTitle>

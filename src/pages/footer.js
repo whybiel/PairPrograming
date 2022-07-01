@@ -13,9 +13,20 @@ const Container = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    @media (max-width:768px) {
+        height: 30em;
+
+        flex-direction: column-reverse;
+    }
 `
 const SectionImg = styled.section`
-    width: 30%;
+    width: 100%;
+
+    @media (max-width:768px) {
+        display: flex;
+        justify-content: center;
+    }
 `
 const ImgSocial = styled.img`
     width: 40px;
@@ -28,6 +39,13 @@ const ImgSocial = styled.img`
     &:hover{
         transform: scale(1.1);
     }
+
+    @media (max-width:768px) {
+        width: 60px;
+        height: 60px;
+
+        margin: 0 0.5em 0 0.5em;
+    }
 `
 
 const List = styled.ul`
@@ -39,6 +57,10 @@ const List = styled.ul`
     align-items: center;
 
     list-style:none;
+
+    @media (max-width:768px) {
+        flex-direction: column;
+    }
 `
 const Item = styled.li`
     width: 8em;
@@ -55,6 +77,12 @@ const Item = styled.li`
 
     &:hover{
         border:3px solid black
+    }
+
+    @media (max-width:768px) {
+        font-size: 1.8em;
+
+        margin: 1em 0 0em 0;
     }
 `
 export default function App() {
